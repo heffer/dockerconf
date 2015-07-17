@@ -16,4 +16,4 @@ RUN \
   rm -rf /data/*
 WORKDIR /data
 EXPOSE 5050
-CMD ["mesos-master", "--work_dir=/var/lib/mesos/master", "--log_dir=/var/log/mesos/master"]
+ENTRYPOINT ["mesos"]
