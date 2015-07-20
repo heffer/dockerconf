@@ -1,4 +1,4 @@
-FROM heffer/oracle-java8
+FROM heffer/oracle-java8:latest
 MAINTAINER Sven Reul <sven@heffer.de>
 ENV SCALA_VERSION 2.11.7
 ENV SBT_VERSION 0.13.8

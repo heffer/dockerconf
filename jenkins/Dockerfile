@@ -10,6 +10,9 @@ RUN chmod +x /usr/local/bin/run.sh
 ADD update_jenkins_plugins.sh /usr/local/bin/update_jenkins_plugins.sh
 RUN chmod +x /usr/local/bin/update_jenkins_plugins.sh
 RUN /usr/local/bin/update_jenkins_plugins.sh
+RUN \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EXPOSE 8080
 EXPOSE 50000
 CMD ["/usr/local/bin/run.sh"]
